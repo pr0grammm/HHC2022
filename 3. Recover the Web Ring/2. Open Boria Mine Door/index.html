@@ -824,111 +824,95 @@ Looking at the source code for pin 1 we see the answer within a comment.</p>
 <p><code>@&amp;@&amp;&amp;W&amp;&amp;W&amp;&amp;&amp;&amp;</code></p>
 <p><img alt="" src="../../images/web_ring/pin1_after.gif" /></p>
 <p>pin2:
-<img alt="" src="../../images/web_ring/pin2_before.png" />
-Looking at the comment in the form we get a clue that the input may not filter out HTML.</p>
+<img alt="" src="../../images/web_ring/pin2_before.png" /></p>
+<p>Looking at the comment in the form we get a clue that the input may not filter out HTML.</p>
 <pre><code>&lt;form method=&quot;post&quot; action=&quot;pin2&quot;&gt;
         &lt;!-- TODO: FILTER OUT HTML FROM USER INPUT --&gt;
         &lt;input class=&quot;inputTxt&quot; name=&quot;inputTxt&quot; type=&quot;text&quot; value=&quot;&quot; autocomplete=&quot;off&quot;&gt;
         &lt;button&gt;GO&lt;/button&gt;
     &lt;/form&gt;
-  ```
-
-As both the input and output sensors are white let's attempt to fill the pin with white color.
-
-`&lt;style&gt;body {background-color: white;}&lt;/style&gt;`
-
-![](../images/web_ring/pin2_after.gif)
-
-pin3:
-![](../images/web_ring/pin3_before.png)
-Looking at the comment in the form we get a clue that the input may not filter out javascript.
 </code></pre>
-<form method="post" action="pin3">
-        <!-- TODO: FILTER OUT JAVASCRIPT FROM USER INPUT -->
-        <input class="inputTxt" name="inputTxt" type="text" value="" autocomplete="off">
-        <button>GO</button>
-    </form>
-
-<pre><code>As both the input and output sensors are blue let's attempt to fill the pin with blue color using JS.
-
-`&lt;script&gt;document.querySelector(&quot;body&quot;).style.cssText = &quot;background-color:blue&quot;&lt;/script&gt;`
-
-![](../images/web_ring/pin3_after.gif)
-pin4:
-![](../images/web_ring/pin4_before.png)
+<p>As both the input and output sensors are white let's attempt to fill the pin with white color.</p>
+<p><code>&lt;style&gt;body {background-color: white;}&lt;/style&gt;</code></p>
+<p><img alt="" src="../../images/web_ring/pin2_after.gif" /></p>
+<p>pin3:
+<img alt="" src="../../images/web_ring/pin3_before.png" /></p>
+<p>Looking at the comment in the form we get a clue that the input may not filter out javascript.</p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;pin3&quot;&gt;
+        &lt;!-- TODO: FILTER OUT JAVASCRIPT FROM USER INPUT --&gt;
+        &lt;input class=&quot;inputTxt&quot; name=&quot;inputTxt&quot; type=&quot;text&quot; value=&quot;&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;button&gt;GO&lt;/button&gt;
+    &lt;/form&gt;
 </code></pre>
-<form method="post" action="pin4">
-        <input class="inputTxt" name="inputTxt" type="text" value="" autocomplete="off" onblur="sanitizeInput()">
-        <button>GO</button>
-    </form>
-
-<pre><code></code></pre>
-<p>const sanitizeInput = () =&gt; {
+<p>As both the input and output sensors are blue let's attempt to fill the pin with blue color using JS.</p>
+<p><code>&lt;script&gt;document.querySelector("body").style.cssText = "background-color:blue"&lt;/script&gt;</code></p>
+<p><img alt="" src="../../images/web_ring/pin3_after.gif" /></p>
+<p>pin4:
+<img alt="" src="../../images/web_ring/pin4_before.png" /></p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;pin4&quot;&gt;
+        &lt;input class=&quot;inputTxt&quot; name=&quot;inputTxt&quot; type=&quot;text&quot; value=&quot;&quot; autocomplete=&quot;off&quot; onblur=&quot;sanitizeInput()&quot;&gt;
+        &lt;button&gt;GO&lt;/button&gt;
+    &lt;/form&gt;
+</code></pre>
+<pre><code>const sanitizeInput = () =&gt; {
             const input = document.querySelector('.inputTxt');
             const content = input.value;
             input.value = content
-                .replace(/"/, '')
+                .replace(/&quot;/, '')
                 .replace(/'/, '')
-                .replace(/<!--, '')
-                .replace(/-->/, '');
-        }</p>
-<pre><code>
-As the sanitization happens on the client side, it can be easily disabled from the browser itself from the Event Listeners tab:
-![](../images/web_ring/remove_blur.png)
-Remove blur event listener on input element and submit the following HTML. As HTML sanitization doesn't happen at the server end either, the code is executed as is.
-
+                .replace(/&lt;/, '')
+                .replace(/&gt;/, '');
+        }
 </code></pre>
-<div style="height:100px;width:200px;background-color:white"></div>
-<div style="height:100px;width:200px;background-color:blue"></div>
-
-<pre><code>
-![](../images/web_ring/pin4_after.gif)
-
-pin5:
-![](../images/web_ring/pin5_before.png)
-Similar to pin4, remove the event listener on blur and submit the following JS. As JS sanitization doesn't happen at the server end either, the code is executed as is.
+<p>As the sanitization happens on the client side, it can be easily disabled from the browser itself from the Event Listeners tab:</p>
+<p><img alt="" src="../../images/web_ring/remove_blur.png" /></p>
+<p>Remove blur event listener on input element and submit the following HTML. As HTML sanitization doesn't happen at the server end either, the code is executed as is.</p>
+<pre><code>&lt;div style=&quot;height:100px;width:200px;background-color:white&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;height:100px;width:200px;background-color:blue&quot;&gt;&lt;/div&gt;
 </code></pre>
-<script>
-bod = document.querySelector("body");
-bod.style.cssText = "background-color:red";
-new_div = document.createElement("div");
-new_div.style.cssText = "height: 120px;width: 200px;background-color:blue;margin-left: 20px;margin-top: 100px;";
+<p><img alt="" src="../../images/web_ring/pin4_after.gif" /></p>
+<p>pin5:
+<img alt="" src="../../images/web_ring/pin5_before.png" /></p>
+<p>Similar to pin4, remove the event listener on blur and submit the following JS. As JS sanitization doesn't happen at the server end either, the code is executed as is.</p>
+<pre><code>&lt;script&gt;
+bod = document.querySelector(&quot;body&quot;);
+bod.style.cssText = &quot;background-color:red&quot;;
+new_div = document.createElement(&quot;div&quot;);
+new_div.style.cssText = &quot;height: 120px;width: 200px;background-color:blue;margin-left: 20px;margin-top: 100px;&quot;;
 bod.append(new_div);
-</script>
-
-<pre><code>
-![](../images/web_ring/pin5_after.gif)
-
-pin6:
-![](../images/web_ring/pin6_before.png)
-After a lot of fiddling around with the filter on this one I realised that some HTML and JS input validation was present but the img HTML element did not seem to be filtered. In particular image [data urls](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) were allowed!
-In fact, most of the pins did not filter the img element with data URL as source:
-
-![cats](../images/web_ring/cats.png)
-
-
-
-To solve pin6 we need green, red and blue colored images which I picked up from wikimedia commons.
-
-&gt; Red
+&lt;/script&gt;
 </code></pre>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"></p>
-<pre><code>
-&gt; Blue
+<p><img alt="" src="../../images/web_ring/pin5_after.gif" /></p>
+<p>pin6:
+<img alt="" src="../../images/web_ring/pin6_before.png" />
+After a lot of fiddling around with the filter on this one I realised that some HTML and JS input validation was present but the img HTML element did not seem to be filtered. In particular image <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs">data urls</a> were allowed!
+In fact, most of the pins did not filter the img element with data URL as source:</p>
+<p><img alt="cats" src="../../images/web_ring/cats.png" /></p>
+<p>To solve pin6 we need green, red and blue colored images which I picked up from wikimedia commons.</p>
+<blockquote>
+<p>Red</p>
+</blockquote>
+<pre><code>&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
 </code></pre>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"></p>
-<pre><code>
+<blockquote>
+<p>Blue</p>
+</blockquote>
+<pre><code>&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
 
-&gt;Green
 </code></pre>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUA/wA0XsCoAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"></p>
-<pre><code>
-&gt; Putting it all together
+<blockquote>
+<p>Green</p>
+</blockquote>
+<pre><code>&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUA/wA0XsCoAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
 </code></pre>
-<p><img width="200" height="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUA/wA0XsCoAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-<img width="200" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-<img width="200" height="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"></p>
-<p>```</p>
+<blockquote>
+<p>Putting it all together</p>
+</blockquote>
+<pre><code>&lt;img width=&quot;200&quot; height=&quot;60&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUA/wA0XsCoAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
+&lt;img width=&quot;200&quot; height=&quot;40&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
+&lt;img width=&quot;200&quot; height=&quot;60&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC&quot;&gt;
+
+</code></pre>
 <p><img alt="" src="../../images/web_ring/pin6_after.gif" /></p>
 <h2 id="rejoice">Rejoice</h2>
 <p><img alt="" src="../../images/web_ring/pins_solved.gif" /></p>
